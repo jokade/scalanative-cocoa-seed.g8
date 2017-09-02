@@ -1,5 +1,7 @@
 A [Giter8][g8] template for Cococa applications written in Scala using [scalanative-cocoa](https://github.com/jokade/scalanative-cocoa).
 
+Call `sbt run` to run the application, or `sbt prepareBundle` to build the application bundle in `target/scala-2.11`.
+
 Template license
 ----------------
 Written in 2017 by jokade.
