@@ -1,4 +1,4 @@
-// !\$*UTF8*\$!
+// !$*UTF8*$!
 {
 	archiveVersion = 1;
 	classes = {
@@ -11,6 +11,18 @@
 		57C7F9561F46286500DAD19F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C7F9551F46286500DAD19F /* Assets.xcassets */; };
 		57C7F9591F46286500DAD19F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57C7F9571F46286500DAD19F /* MainMenu.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		5762F9B81F5A89AA00D7C72E /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# <com.apple.compilers.gcc>\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
 		57C0B24F1F52DE0E00D5308A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,7 +47,7 @@
 		57C7F9431F46286500DAD19F = {
 			isa = PBXGroup;
 			children = (
-				57C7F94E1F46286500DAD19F /* $name$ */,
+				57C7F94E1F46286500DAD19F /* App */,
 				57C7F94D1F46286500DAD19F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,7 +60,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		57C7F94E1F46286500DAD19F /* $name$ */ = {
+		57C7F94E1F46286500DAD19F /* App */ = {
 			isa = PBXGroup;
 			children = (
 				57C7F9551F46286500DAD19F /* Assets.xcassets */,
@@ -82,21 +94,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		57C7F94B1F46286500DAD19F /* ScalaCocoaExample */ = {
+		57C7F94B1F46286500DAD19F /* $name$ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57C7F95D1F46286500DAD19F /* Build configuration list for PBXNativeTarget "ScalaCocoaExample" */;
+			buildConfigurationList = 57C7F95D1F46286500DAD19F /* Build configuration list for PBXNativeTarget "$name$" */;
 			buildPhases = (
 				57C7F9491F46286500DAD19F /* Frameworks */,
 				57C7F94A1F46286500DAD19F /* Resources */,
 				57C0B2541F52DF3F00D5308A /* Headers */,
 			);
 			buildRules = (
+				5762F9B81F5A89AA00D7C72E /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
 			name = $name$;
 			productName = $name$;
-			productReference = 57C7F94C1F46286500DAD19F /* $name$ */;
+			productReference = 57C7F94C1F46286500DAD19F /* $name$.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 57C7F9471F46286500DAD19F /* Build configuration list for PBXProject "$name$" */;
+			buildConfigurationList = 57C7F9471F46286500DAD19F /* Build configuration list for PBXProject "App" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -188,7 +201,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
-					"\$(inherited)",
+					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -249,9 +262,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "\$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = $organization$.$name$;
-				PRODUCT_NAME = "\$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -261,16 +274,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = App/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "\$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = $organization$.$name$;
-				PRODUCT_NAME = "\$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57C7F9471F46286500DAD19F /* Build configuration list for PBXProject "$name$" */ = {
+		57C7F9471F46286500DAD19F /* Build configuration list for PBXProject "App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57C7F95B1F46286500DAD19F /* Debug */,
