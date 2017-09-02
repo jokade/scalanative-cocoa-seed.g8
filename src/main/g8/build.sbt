@@ -27,6 +27,8 @@ xcodeBuildPath             := baseDirectory.value / "xcode" / "DerivedData" / "B
 nativeLinkingOptions ++= Seq("-o",(artifactPath in nativeLink).value.getAbsolutePath)
 
 prepareBundle := {
+  (nativeLink in Compile).value
+
   val binary = (artifactPath in nativeLink).value
   IO.createDirectory(binary.getParentFile)
 
@@ -37,11 +39,11 @@ prepareBundle := {
       (x, tgt / x.relativeTo(base).get.getPath) )
 
   IO.copy(files)
-  //IO.copyDirectory(xcodeBuildPath.value, bundlePath.value)
   bundlePath.value
 }
 
-nativeLink in Compile := {
-  (prepareBundle in nativeLink).value
-  (nativeLink in Compile).value
+run in Compile := {
+  prepareBundle.value
+
+  (artifactPath in nativeLink).value.toString !
 }
