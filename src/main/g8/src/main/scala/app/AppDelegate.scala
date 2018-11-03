@@ -1,35 +1,33 @@
-//     Project: ScalaCocoaExample
-//      Module:
-// Description:
 package app
 
-import cocoa.appkit.{NSApplicationClass, NSApplicationDelegate, NSTextField}
+import scalanative.native._
+import objc._
 import cocoa.foundation._
-import objc.ScalaObjC
+import cocoa.appkit._
 
 @ScalaObjC
-class AppDelegate(self: AppDelegate.InstanceType) extends NSApplicationDelegate {
+class AppDelegate(self: id) extends NSObject with NSApplicationDelegate {
   private var _clickCount = 0
 
   /* Outlets */
-  var window: NSObject = _
+  var window: NSWindow = _
   var clickCountView: NSTextField = _
 
   /* Actions */
-  def takeClick(id: NSObject): Unit = {
+  def takeClick_(id: NSObject): Unit = {
     _clickCount += 1
     updateView()
   }
 
-  override def applicationDidFinishLaunching(notification: NSNotification): Unit = {
+  override def applicationDidFinishLaunching_(notification: NSNotification): Unit = {
     updateView()
   }
 
   private def updateView(): Unit = {
-    clickCountView.setIntegerValue(_clickCount)
+    clickCountView.setIntegerValue_(_clickCount)
   }
 }
 
 object AppDelegate extends NSApplicationClass {
-  type InstanceType = NSObject //NSApplicationDelegate
+  type InstanceType = AppDelegate
 }

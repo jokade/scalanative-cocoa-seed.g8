@@ -70,7 +70,7 @@
 				57C0B24F1F52DE0E00D5308A /* AppDelegate.h */,
 				57C0B2501F52DE0E00D5308A /* AppDelegate.m */,
 			);
-			path = App;
+			path = $name$;
 			sourceTree = "<group>";
 		};
 		57C7F9521F46286500DAD19F /* Supporting Files */ = {
